@@ -22,9 +22,9 @@ jobs:
         run: pytest --maxfail=1 --disable-warnings
         env: 
           PYTHONPATH: ${{ github.workspace }}
-      
+
       - name: Print secret value
-        run: echo "Message: ${{ secrets.MY_MESSAGE }}"
+        run: echo " Message ${{ secrets.MY_MESSAGE }} "
 
       - name: Upload test report
         uses: actions/upload-artifact@v4
